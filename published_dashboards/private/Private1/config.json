@@ -1,0 +1,222 @@
+{
+    "feature_bounds": {
+        "value": "published_dashboards\\private\\Private1\\feature_bounds.joblib",
+        "type": "joblib_file"
+    },
+    "trigger_scroll_to_top": {
+        "value": false,
+        "type": "bool"
+    },
+    "match_df": {
+        "value": "published_dashboards\\private\\Private1\\match_df.parquet",
+        "type": "DataFrame"
+    },
+    "statistical_summary_all_df": {
+        "value": "published_dashboards\\private\\Private1\\statistical_summary_all_df.parquet",
+        "type": "DataFrame"
+    },
+    "missing_geo": {
+        "value": [
+            "BANGALORE"
+        ],
+        "type": "list"
+    },
+    "selected_state": {
+        "value": "KARNATAKA",
+        "type": "str"
+    },
+    "merge_history": {
+        "value": [],
+        "type": "list"
+    },
+    "final_selected_features": {
+        "value": [
+            "Percentage of households not having access to pucca house",
+            "Percentage of households not having access to electricity"
+        ],
+        "type": "list"
+    },
+    "agg_map": {
+        "value": "published_dashboards\\private\\Private1\\agg_map.joblib",
+        "type": "joblib_file"
+    },
+    "target_direction": {
+        "value": "Increase",
+        "type": "str"
+    },
+    "all_feats_pool": {
+        "value": [
+            "Percentage of households not having access to electricity",
+            "Percentage of households not having access to pucca house"
+        ],
+        "type": "list"
+    },
+    "bucket_lists": {
+        "value": "published_dashboards\\private\\Private1\\bucket_lists.joblib",
+        "type": "joblib_file"
+    },
+    "final_models": {
+        "value": "published_dashboards\\private\\Private1\\final_models.joblib",
+        "type": "joblib_file"
+    },
+    "engineered_fields": {
+        "value": [],
+        "type": "list"
+    },
+    "selected_models": {
+        "value": [
+            "linear"
+        ],
+        "type": "list"
+    },
+    "scaler": {
+        "value": "published_dashboards\\private\\Private1\\scaler.joblib",
+        "type": "joblib_file"
+    },
+    "gdf": {
+        "value": "published_dashboards\\private\\Private1\\gdf.geojson",
+        "type": "GeoDataFrame"
+    },
+    "feature_schemes": {
+        "value": "published_dashboards\\private\\Private1\\feature_schemes.joblib",
+        "type": "joblib_file"
+    },
+    "feature_buckets_grouped": {
+        "value": "published_dashboards\\private\\Private1\\feature_buckets_grouped.joblib",
+        "type": "joblib_file"
+    },
+    "trained_models": {
+        "value": "published_dashboards\\private\\Private1\\trained_models.joblib",
+        "type": "joblib_file"
+    },
+    "show_hparam_expander": {
+        "value": false,
+        "type": "bool"
+    },
+    "geo_unit_col": {
+        "value": "District",
+        "type": "str"
+    },
+    "final_feature_importances": {
+        "value": "published_dashboards\\private\\Private1\\final_feature_importances.joblib",
+        "type": "joblib_file"
+    },
+    "sensitivities": {
+        "value": "published_dashboards\\private\\Private1\\sensitivities.joblib",
+        "type": "joblib_file"
+    },
+    "y_test": {
+        "value": "published_dashboards\\private\\Private1\\y_test.joblib",
+        "type": "joblib_file"
+    },
+    "X_train": {
+        "value": "published_dashboards\\private\\Private1\\X_train.parquet",
+        "type": "DataFrame"
+    },
+    "y_train": {
+        "value": "published_dashboards\\private\\Private1\\y_train.joblib",
+        "type": "joblib_file"
+    },
+    "df_final": {
+        "value": "published_dashboards\\private\\Private1\\df_final.parquet",
+        "type": "DataFrame"
+    },
+    "feature_bucket_map": {
+        "value": "published_dashboards\\private\\Private1\\feature_bucket_map.joblib",
+        "type": "joblib_file"
+    },
+    "merge_pool": {
+        "value": "published_dashboards\\private\\Private1\\merge_pool.joblib",
+        "type": "joblib_file"
+    },
+    "uploaded_df": {
+        "value": "published_dashboards\\private\\Private1\\uploaded_df.parquet",
+        "type": "DataFrame"
+    },
+    "target_col": {
+        "value": "Percentage of households not having access to safe drinking water",
+        "type": "str"
+    },
+    "X_test": {
+        "value": "published_dashboards\\private\\Private1\\X_test.parquet",
+        "type": "DataFrame"
+    },
+    "geo_sim_thresh": {
+        "value": 80,
+        "type": "int"
+    },
+    "buckets": {
+        "value": [
+            "Demographics",
+            "Infrastructure",
+            "Linguistics",
+            "Economics"
+        ],
+        "type": "list"
+    },
+    "logged_in": {
+        "value": true,
+        "type": "bool"
+    },
+    "GEO_COL": {
+        "value": "dtname",
+        "type": "str"
+    },
+    "target_bounds": {
+        "value": [
+            0.4990538054238698,
+            15.86348355958605
+        ],
+        "type": "tuple"
+    },
+    "custom_params": {
+        "value": "published_dashboards\\private\\Private1\\custom_params.joblib",
+        "type": "joblib_file"
+    },
+    "feature_importances": {
+        "value": "published_dashboards\\private\\Private1\\feature_importances.joblib",
+        "type": "joblib_file"
+    },
+    "columns_confirmed": {
+        "value": true,
+        "type": "bool"
+    },
+    "unmatched_upload": {
+        "value": [
+            "VIJAYANAGARA",
+            "NAN"
+        ],
+        "type": "list"
+    },
+    "use_standardized": {
+        "value": true,
+        "type": "bool"
+    },
+    "grouped_df": {
+        "value": "published_dashboards\\private\\Private1\\grouped_df.parquet",
+        "type": "DataFrame"
+    },
+    "best_params": {
+        "value": "published_dashboards\\private\\Private1\\best_params.joblib",
+        "type": "joblib_file"
+    },
+    "mapping": {
+        "value": "published_dashboards\\private\\Private1\\mapping.joblib",
+        "type": "joblib_file"
+    },
+    "public_sub_page": {
+        "value": "Public Dashboard Gallery",
+        "type": "str"
+    },
+    "feature_bucket_mapping_df": {
+        "value": "published_dashboards\\private\\Private1\\feature_bucket_mapping_df.parquet",
+        "type": "DataFrame"
+    },
+    "factor_cols": {
+        "value": [
+            "Percentage of households not having access to pucca house",
+            "Percentage of households not having access to electricity"
+        ],
+        "type": "list"
+    }
+}
