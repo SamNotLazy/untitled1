@@ -1,14 +1,1 @@
-[
-    {
-        "id": "c39d72ba-87b7-46b3-bb45-5264550e3d51",
-        "name": "Pub1",
-        "privacy": "Public",
-        "path": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51"
-    },
-    {
-        "id": "d10111f0-da64-493d-95dc-f6f5fe8c64b1",
-        "name": "Pri1",
-        "privacy": "Private",
-        "path": "published_dashboards\\d10111f0-da64-493d-95dc-f6f5fe8c64b1"
-    }
-]
+[]

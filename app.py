@@ -87,9 +87,17 @@ def login():
 
 def logout():
     """Logs out the user by resetting the session state."""
-    st.session_state.logged_in = False
-    st.session_state.pre_login_page = "Public Dashboards"
-    st.session_state.public_sub_page = "Public Dashboard Gallery"
+    st.session_state.clear()
+    if "logged_in" not in st.session_state:
+        st.session_state.logged_in = False
+    if "pre_login_page" not in st.session_state:
+        st.session_state.pre_login_page = "Login"
+    if "public_sub_page" not in st.session_state:
+        st.session_state.public_sub_page = "Public Dashboard Gallery"
+    if "logged_in_main_section" not in st.session_state:
+        st.session_state.logged_in_main_section = "Home"
+    if "logged_in_sub_page" not in st.session_state:
+        st.session_state.logged_in_sub_page = "Intervention Setup"
     st.rerun() # Rerun the app to show the login screen
 
 # If the user is not logged in, show the login page or public dashboards.
