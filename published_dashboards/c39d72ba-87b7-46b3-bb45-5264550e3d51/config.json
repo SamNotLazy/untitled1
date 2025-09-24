@@ -1,0 +1,238 @@
+{
+    "feature_bucket_mapping_df": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\feature_bucket_mapping_df.parquet",
+        "type": "DataFrame"
+    },
+    "mapping": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\mapping.joblib",
+        "type": "joblib_file"
+    },
+    "sensitivities": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\sensitivities.joblib",
+        "type": "joblib_file"
+    },
+    "X_test": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\X_test.parquet",
+        "type": "DataFrame"
+    },
+    "final_feature_importances": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\final_feature_importances.joblib",
+        "type": "joblib_file"
+    },
+    "agg_map": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\agg_map.joblib",
+        "type": "joblib_file"
+    },
+    "merge_pool": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\merge_pool.joblib",
+        "type": "joblib_file"
+    },
+    "merge_history": {
+        "value": [],
+        "type": "list"
+    },
+    "match_df": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\match_df.parquet",
+        "type": "DataFrame"
+    },
+    "public_sub_page": {
+        "value": "Public Dashboard Gallery",
+        "type": "str"
+    },
+    "unmatched_upload": {
+        "value": [
+            "VIJAYANAGARA",
+            "NAN"
+        ],
+        "type": "list"
+    },
+    "show_hparam_expander": {
+        "value": false,
+        "type": "bool"
+    },
+    "X_train": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\X_train.parquet",
+        "type": "DataFrame"
+    },
+    "uploaded_df": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\uploaded_df.parquet",
+        "type": "DataFrame"
+    },
+    "buckets": {
+        "value": [
+            "Demographics",
+            "Infrastructure",
+            "Linguistics",
+            "Economics"
+        ],
+        "type": "list"
+    },
+    "final_models": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\final_models.joblib",
+        "type": "joblib_file"
+    },
+    "scaler": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\scaler.joblib",
+        "type": "joblib_file"
+    },
+    "df_final": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\df_final.parquet",
+        "type": "DataFrame"
+    },
+    "trained_models": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\trained_models.joblib",
+        "type": "joblib_file"
+    },
+    "gdf": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\gdf.geojson",
+        "type": "GeoDataFrame"
+    },
+    "feature_bucket_map": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\feature_bucket_map.joblib",
+        "type": "joblib_file"
+    },
+    "ingested_ids": {
+        "value": "{'HDI & MPI Data depri(new).xlsx:149312'}",
+        "type": "str"
+    },
+    "grouped_df": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\grouped_df.parquet",
+        "type": "DataFrame"
+    },
+    "engineered_fields": {
+        "value": [],
+        "type": "list"
+    },
+    "bucket_lists": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\bucket_lists.joblib",
+        "type": "joblib_file"
+    },
+    "logged_in": {
+        "value": true,
+        "type": "bool"
+    },
+    "target_direction": {
+        "value": "Increase",
+        "type": "str"
+    },
+    "use_standardized": {
+        "value": true,
+        "type": "bool"
+    },
+    "selected_state": {
+        "value": "KARNATAKA",
+        "type": "str"
+    },
+    "target_bounds": {
+        "value": [
+            1.055186872974701,
+            79.91490905323832
+        ],
+        "type": "tuple"
+    },
+    "y_test": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\y_test.joblib",
+        "type": "joblib_file"
+    },
+    "statistical_summary_all_df": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\statistical_summary_all_df.parquet",
+        "type": "DataFrame"
+    },
+    "all_feats_pool": {
+        "value": [
+            "Percentage of households not having access to electricity",
+            "Percentage of households not having access to pucca house"
+        ],
+        "type": "list"
+    },
+    "feature_importances": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\feature_importances.joblib",
+        "type": "joblib_file"
+    },
+    "GEO_COL": {
+        "value": "dtname",
+        "type": "str"
+    },
+    "y_train": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\y_train.joblib",
+        "type": "joblib_file"
+    },
+    "missing_geo": {
+        "value": [
+            "BANGALORE"
+        ],
+        "type": "list"
+    },
+    "best_params": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\best_params.joblib",
+        "type": "joblib_file"
+    },
+    "logged_in_main_section": {
+        "value": "Home",
+        "type": "str"
+    },
+    "final_selected_features": {
+        "value": [
+            "Percentage of households not having access to pucca house",
+            "Percentage of households not having access to electricity"
+        ],
+        "type": "list"
+    },
+    "logged_in_sub_page": {
+        "value": "Intervention Setup",
+        "type": "str"
+    },
+    "trigger_scroll_to_top": {
+        "value": false,
+        "type": "bool"
+    },
+    "feature_bounds": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\feature_bounds.joblib",
+        "type": "joblib_file"
+    },
+    "target_col": {
+        "value": "Percentage of households not having access to toilet",
+        "type": "str"
+    },
+    "factor_cols": {
+        "value": [
+            "Percentage of households not having access to pucca house",
+            "Percentage of households not having access to electricity"
+        ],
+        "type": "list"
+    },
+    "geo_unit_col": {
+        "value": "District",
+        "type": "str"
+    },
+    "selected_models": {
+        "value": [
+            "linear"
+        ],
+        "type": "list"
+    },
+    "columns_confirmed": {
+        "value": true,
+        "type": "bool"
+    },
+    "pre_login_page": {
+        "value": "Login",
+        "type": "str"
+    },
+    "custom_params": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\custom_params.joblib",
+        "type": "joblib_file"
+    },
+    "geo_sim_thresh": {
+        "value": 80,
+        "type": "int"
+    },
+    "feature_buckets_grouped": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\feature_buckets_grouped.joblib",
+        "type": "joblib_file"
+    },
+    "feature_schemes": {
+        "value": "published_dashboards\\c39d72ba-87b7-46b3-bb45-5264550e3d51\\feature_schemes.joblib",
+        "type": "joblib_file"
+    }
+}
