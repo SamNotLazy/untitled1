@@ -13,21 +13,22 @@ from sklearn.ensemble import RandomForestRegressor
 from streamlit.errors import StreamlitValueAssignmentNotAllowedError
 from xgboost import XGBRegressor
 
+from pages.home import load_geo
 
 # This is a placeholder for the user's load_geo function
-def load_geo(filepath):
-    """
-    A placeholder function to load a GeoDataFrame.
-    Assumes a GeoJSON file and a geometry column.
-    """
-    try:
-        gdf = gpd.read_file(filepath)
-        # Assuming the geometry column is named 'geometry'
-        geo_col = 'geometry'
-        return gdf, geo_col
-    except Exception as e:
-        st.error(f"Error loading GeoJSON file: {e}")
-        return None, None
+# def load_geo(filepath):
+#     """
+#     A placeholder function to load a GeoDataFrame.
+#     Assumes a GeoJSON file and a geometry column.
+#     """
+#     try:
+#         gdf = gpd.read_file(filepath)
+#         # Assuming the geometry column is named 'geometry'
+#         geo_col = 'geometry'
+#         return gdf, geo_col
+#     except Exception as e:
+#         st.error(f"Error loading GeoJSON file: {e}")
+#         return None, None
 
 # --- Helper Functions for JSON File Management ---
 DASHBOARD_FILE = "dashboards.json"
@@ -82,7 +83,6 @@ def load_session_state_from_dir(dashboard_path):
 
             # If all items are loaded successfully, set the flag to True
             st.session_state.dashboard_loaded = True
-            st.session_state["loaded_dashboard_name"] = os.path.basename(dashboard_path)
             st.success(f"Dashboard '{os.path.basename(dashboard_path)}' loaded successfully!")
         except Exception as e:
             st.error(f"Error loading dashboard: {e}")
@@ -116,6 +116,8 @@ def run_public_dashboard_view():
             with col2:
                 if st.button("Load", key=f"load_button_{dashboard['id']}"):
                     with st.spinner("Loading..."):
+                        st.session_state["loaded_dashboard_name"] = dashboard['name']
+
                         load_session_state_from_dir(dashboard['path'])
                         st.session_state.logged_in = False
     else:

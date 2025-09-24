@@ -195,6 +195,8 @@ def run_private_dashboard_gallery():
             with col1:
                 if st.button("Load Dashboard"):
                     with st.spinner("Loading..."):
+                        st.session_state["loaded_dashboard_name"] =selected_dashboard['name']
+
                         load_session_state_from_dir(selected_dashboard['path'])
             with col2:
                 new_privacy = "private" if selected_dashboard["privacy"] == "Public" else "public"
