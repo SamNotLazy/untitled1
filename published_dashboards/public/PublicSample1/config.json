@@ -1,0 +1,246 @@
+{
+    "logged_in_main_section": {
+        "value": "Home",
+        "type": "str"
+    },
+    "X_test": {
+        "value": "published_dashboards\\Public\\PublicSample1\\X_test.parquet",
+        "type": "DataFrame"
+    },
+    "target_bounds": {
+        "value": [
+            0.6182704774790011,
+            71.37133778567085
+        ],
+        "type": "tuple"
+    },
+    "gdf": {
+        "value": "published_dashboards\\Public\\PublicSample1\\gdf.geojson",
+        "type": "GeoDataFrame"
+    },
+    "engineered_fields": {
+        "value": [],
+        "type": "list"
+    },
+    "show_hparam_expander": {
+        "value": false,
+        "type": "bool"
+    },
+    "selected_models": {
+        "value": [
+            "linear"
+        ],
+        "type": "list"
+    },
+    "feature_buckets_grouped": {
+        "value": "published_dashboards\\Public\\PublicSample1\\feature_buckets_grouped.joblib",
+        "type": "joblib_file"
+    },
+    "merge_history": {
+        "value": [],
+        "type": "list"
+    },
+    "geo_unit_col": {
+        "value": "District",
+        "type": "str"
+    },
+    "use_standardized": {
+        "value": true,
+        "type": "bool"
+    },
+    "combined_dashboard_selector": {
+        "value": "PrivateSample1 (Private)",
+        "type": "str"
+    },
+    "feature_bucket_map": {
+        "value": "published_dashboards\\Public\\PublicSample1\\feature_bucket_map.joblib",
+        "type": "joblib_file"
+    },
+    "all_feats_pool": {
+        "value": [
+            "Percentage of households not having access to electricity",
+            "Percentage of households not having access to pucca house"
+        ],
+        "type": "list"
+    },
+    "delete_confirm": {
+        "value": false,
+        "type": "bool"
+    },
+    "columns_confirmed": {
+        "value": true,
+        "type": "bool"
+    },
+    "buckets": {
+        "value": [
+            "Demographics",
+            "Infrastructure",
+            "Linguistics",
+            "Economics"
+        ],
+        "type": "list"
+    },
+    "geo_sim_thresh": {
+        "value": 80,
+        "type": "int"
+    },
+    "final_models": {
+        "value": "published_dashboards\\Public\\PublicSample1\\final_models.joblib",
+        "type": "joblib_file"
+    },
+    "target_col": {
+        "value": "Percentage of Households not having access to modern cooking fuel",
+        "type": "str"
+    },
+    "public_sub_page": {
+        "value": "Public Dashboard Gallery",
+        "type": "str"
+    },
+    "selected_state": {
+        "value": "KARNATAKA",
+        "type": "str"
+    },
+    "bucket_lists": {
+        "value": "published_dashboards\\Public\\PublicSample1\\bucket_lists.joblib",
+        "type": "joblib_file"
+    },
+    "sensitivities": {
+        "value": "published_dashboards\\Public\\PublicSample1\\sensitivities.joblib",
+        "type": "joblib_file"
+    },
+    "final_feature_importances": {
+        "value": "published_dashboards\\Public\\PublicSample1\\final_feature_importances.joblib",
+        "type": "joblib_file"
+    },
+    "GEO_COL": {
+        "value": "dtname",
+        "type": "str"
+    },
+    "agg_map": {
+        "value": "published_dashboards\\Public\\PublicSample1\\agg_map.joblib",
+        "type": "joblib_file"
+    },
+    "feature_bounds": {
+        "value": "published_dashboards\\Public\\PublicSample1\\feature_bounds.joblib",
+        "type": "joblib_file"
+    },
+    "match_df": {
+        "value": "published_dashboards\\Public\\PublicSample1\\match_df.parquet",
+        "type": "DataFrame"
+    },
+    "feature_importances": {
+        "value": "published_dashboards\\Public\\PublicSample1\\feature_importances.joblib",
+        "type": "joblib_file"
+    },
+    "trained_models": {
+        "value": "published_dashboards\\Public\\PublicSample1\\trained_models.joblib",
+        "type": "joblib_file"
+    },
+    "scaler": {
+        "value": "published_dashboards\\Public\\PublicSample1\\scaler.joblib",
+        "type": "joblib_file"
+    },
+    "df_final": {
+        "value": "published_dashboards\\Public\\PublicSample1\\df_final.parquet",
+        "type": "DataFrame"
+    },
+    "mapping": {
+        "value": "published_dashboards\\Public\\PublicSample1\\mapping.joblib",
+        "type": "joblib_file"
+    },
+    "logged_in": {
+        "value": true,
+        "type": "bool"
+    },
+    "unmatched_upload": {
+        "value": [
+            "VIJAYANAGARA",
+            "NAN"
+        ],
+        "type": "list"
+    },
+    "final_selected_features": {
+        "value": [
+            "Percentage of households not having access to pucca house",
+            "Percentage of households not having access to electricity"
+        ],
+        "type": "list"
+    },
+    "feature_schemes": {
+        "value": "published_dashboards\\Public\\PublicSample1\\feature_schemes.joblib",
+        "type": "joblib_file"
+    },
+    "missing_geo": {
+        "value": [
+            "BANGALORE"
+        ],
+        "type": "list"
+    },
+    "pre_login_page": {
+        "value": "Login",
+        "type": "str"
+    },
+    "y_train": {
+        "value": "published_dashboards\\Public\\PublicSample1\\y_train.joblib",
+        "type": "joblib_file"
+    },
+    "target_direction": {
+        "value": "Increase",
+        "type": "str"
+    },
+    "merge_pool": {
+        "value": "published_dashboards\\Public\\PublicSample1\\merge_pool.joblib",
+        "type": "joblib_file"
+    },
+    "trigger_scroll_to_top": {
+        "value": false,
+        "type": "bool"
+    },
+    "factor_cols": {
+        "value": [
+            "Percentage of households not having access to pucca house",
+            "Percentage of households not having access to electricity"
+        ],
+        "type": "list"
+    },
+    "ingested_ids": {
+        "value": "{'HDI & MPI Data depri(new).xlsx:149312'}",
+        "type": "str"
+    },
+    "statistical_summary_all_df": {
+        "value": "published_dashboards\\Public\\PublicSample1\\statistical_summary_all_df.parquet",
+        "type": "DataFrame"
+    },
+    "custom_params": {
+        "value": "published_dashboards\\Public\\PublicSample1\\custom_params.joblib",
+        "type": "joblib_file"
+    },
+    "grouped_df": {
+        "value": "published_dashboards\\Public\\PublicSample1\\grouped_df.parquet",
+        "type": "DataFrame"
+    },
+    "feature_bucket_mapping_df": {
+        "value": "published_dashboards\\Public\\PublicSample1\\feature_bucket_mapping_df.parquet",
+        "type": "DataFrame"
+    },
+    "X_train": {
+        "value": "published_dashboards\\Public\\PublicSample1\\X_train.parquet",
+        "type": "DataFrame"
+    },
+    "logged_in_sub_page": {
+        "value": "Intervention Setup",
+        "type": "str"
+    },
+    "uploaded_df": {
+        "value": "published_dashboards\\Public\\PublicSample1\\uploaded_df.parquet",
+        "type": "DataFrame"
+    },
+    "y_test": {
+        "value": "published_dashboards\\Public\\PublicSample1\\y_test.joblib",
+        "type": "joblib_file"
+    },
+    "best_params": {
+        "value": "published_dashboards\\Public\\PublicSample1\\best_params.joblib",
+        "type": "joblib_file"
+    }
+}
