@@ -13,6 +13,8 @@ from streamlit.errors import StreamlitValueAssignmentNotAllowedError
 from xgboost import XGBRegressor
 from uuid import uuid4
 
+from pages.public_dashboard_view import load_session_state_from_dir
+
 # Assuming these imports exist in the user's project
 # from pages.home import load_geo
 # from pages.public_dashboard_view import load_session_state_from_dir
@@ -147,12 +149,6 @@ def switch_dashboard_privacy(dashboard_info):
         st.error(f"Error switching privacy: {e}")
 
 
-def load_session_state_from_dir(dashboard_path):
-    # This is a placeholder for your existing function
-    st.info(f"Loading dashboard from {dashboard_path}...")
-    # Add your actual loading logic here
-    st.session_state.logged_in = True
-    st.success("Dashboard Loaded! (Placeholder)")
 
 
 def run_private_dashboard_gallery():
