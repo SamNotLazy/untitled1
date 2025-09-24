@@ -9,69 +9,28 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestRegressor
+from streamlit.errors import StreamlitValueAssignmentNotAllowedError
 from xgboost import XGBRegressor
-import datetime
 
-# Assuming this function is available from your 'home' page or a utility file.
-def load_geo(file_path):
-    """Placeholder for the load_geo function from pages.home.
+from pages.home import load_geo
+from pages.public_dashboard_view import load_session_state_from_dir
 
-    This function should load a GeoJSON file and return a GeoDataFrame
-    and the name of its geometry column.
-    """
-    gdf = gpd.read_file(file_path)
-    geo_col = gdf.geometry.name
-    return gdf, geo_col
-
-
-def get_dashboard_index_path():
-    """Returns the path to the central dashboard index file."""
-    return os.path.join("published_dashboards", "dashboards.json")
-
-def load_dashboard_index():
-    """Loads the dashboard index from the JSON file."""
-    index_path = get_dashboard_index_path()
-    if not os.path.exists(index_path):
-        return []
-    try:
-        with open(index_path, "r") as f:
-            return json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError):
-        return []
-
-def save_dashboard_index(index):
-    """Saves the dashboard index to the JSON file."""
-    index_path = get_dashboard_index_path()
-    try:
-        with open(index_path, "w") as f:
-            json.dump(index, f, indent=4)
-        return True
-    except Exception as e:
-        st.error(f"Error saving dashboard index: {e}")
-        return False
 
 def save_session_state_to_dir(dashboard_name, privacy_setting, base_dir="published_dashboards"):
     """
-    Saves the current Streamlit session state to a dedicated directory for publishing
-    and updates a central dashboard index file.
+    Saves the current Streamlit session state to a dedicated directory for publishing.
+
+    This function serializes the session state and any non-serializable objects
+    (models, dataframes, etc.) into a new directory.
     """
     # Create the base directory if it doesn't exist
     if not os.path.exists(base_dir):
         os.makedirs(base_dir)
 
     # Determine the save path based on privacy setting
-    save_path = os.path.join(base_dir, privacy_setting.lower(), dashboard_name)
-
-    # Load existing dashboard index
-    dashboard_index = load_dashboard_index()
-
-    # Check for existing dashboard with the same name and privacy setting
-    if any(d['name'] == dashboard_name and d['privacy'] == privacy_setting.lower() for d in dashboard_index):
-        st.warning(f"A dashboard with the name '{dashboard_name}' already exists in the '{privacy_setting.lower()}' gallery. Please choose a different name.")
-        return False
-
+    save_path = os.path.join(base_dir, privacy_setting, dashboard_name)
     if os.path.exists(save_path):
-        st.warning(f"A directory with the name '{dashboard_name}' already exists. Please choose a different name.")
+        st.warning(f"A dashboard with the name '{dashboard_name}' already exists. Please choose a different name.")
         return False
 
     # Create the directory for the new dashboard
@@ -80,12 +39,6 @@ def save_session_state_to_dir(dashboard_name, privacy_setting, base_dir="publish
     try:
         data_to_save = {}
         for key, value in st.session_state.items():
-            # Skip keys that are part of the Streamlit UI state
-            if key in ["editor_linear", "multi_uploader", "combined_dashboard_selector",
-                       "delete_confirm", "logged_in_main_section", "logged_in_sub_page",
-                       "pre_login_page"]:
-                continue
-
             # Special handling for non-serializable objects
             if isinstance(value, gpd.GeoDataFrame):
                 # Save GeoDataFrame as a geojson file
@@ -120,22 +73,16 @@ def save_session_state_to_dir(dashboard_name, privacy_setting, base_dir="publish
                         "type": type(value).__name__
                     }
                 except TypeError:
-                    st.warning(f"Non-serializable object found for key '{key}'. This item will not be saved.")
-                    continue
+                    # st.warning(f"Non-serializable object found for key '{key}'. Saving as a string representation.")
+                    data_to_save[key] = {
+                        "value": str(value),
+                        "type": "str"
+                    }
 
         # Save the main configuration file
         config_file_path = os.path.join(save_path, "config.json")
         with open(config_file_path, "w") as f:
             json.dump(data_to_save, f, indent=4)
-
-        # Add the new dashboard to the index
-        dashboard_index.append({
-            "name": dashboard_name,
-            "path": save_path,
-            "privacy": privacy_setting.lower(),
-            "created_at": str(datetime.datetime.now())
-        })
-        save_dashboard_index(dashboard_index)
 
         return True
 
@@ -146,60 +93,15 @@ def save_session_state_to_dir(dashboard_name, privacy_setting, base_dir="publish
             shutil.rmtree(save_path)
         return False
 
-def load_session_state_from_dir(dashboard_path):
-    """
-    Loads the Streamlit session state from a published dashboard's directory.
-    """
-    config_file_path = os.path.join(dashboard_path, "config.json")
-    if os.path.exists(config_file_path):
-        try:
-            with open(config_file_path, "r") as f:
-                loaded_data = json.load(f)
-
-            for key, item_data in loaded_data.items():
-                value = item_data.get("value")
-                type_name = item_data.get("type")
-
-                # Skip Streamlit internal state keys
-                if key in ["editor_linear", "multi_uploader", "combined_dashboard_selector", "delete_confirm"]:
-                    continue
-
-                if type_name == "GeoDataFrame":
-                    # Load GeoDataFrame from the saved geojson file
-                    if os.path.exists(value):
-                        st.session_state[key], st.session_state["GEO_COL"] = load_geo(value)
-                    else:
-                        st.error(f"GeoDataFrame file not found: {value}")
-                elif type_name == "DataFrame":
-                    # Load DataFrame from the saved parquet file
-                    if os.path.exists(value):
-                        st.session_state[key] = pd.read_parquet(value)
-                elif type_name == "joblib_file":
-                    # Load the serialized object from the file
-                    if os.path.exists(value):
-                        st.session_state[key] = joblib.load(value)
-                else:
-                    # For other types, directly assign the value
-                    st.session_state[key] = value
-
-            st.success(f"Dashboard '{os.path.basename(dashboard_path)}' loaded successfully!")
-        except Exception as e:
-            st.error(f"Error loading dashboard: {e}")
-    else:
-        st.error("Dashboard configuration file not found.")
 
 def delete_dashboard(dashboard_path):
-    """Deletes a published dashboard's directory and updates the index."""
+    """Deletes a published dashboard's directory."""
     try:
         if os.path.exists(dashboard_path):
             shutil.rmtree(dashboard_path)
-            # Update the index file
-            dashboard_index = load_dashboard_index()
-            dashboard_index = [d for d in dashboard_index if d['path'] != dashboard_path]
-            save_dashboard_index(dashboard_index)
             st.success(f"Dashboard '{os.path.basename(dashboard_path)}' has been deleted successfully.")
         else:
-            st.warning("Dashboard directory not found.")
+            st.warning("Dashboard not found.")
     except Exception as e:
         st.error(f"Error deleting dashboard: {e}")
 
@@ -207,16 +109,15 @@ def switch_dashboard_privacy(dashboard_path):
     """Switches a dashboard between 'public' and 'private' privacy settings."""
     try:
         base_dir = "published_dashboards"
-        rel_path = os.path.relpath(dashboard_path, base_dir)
-        current_privacy = rel_path.split(os.path.sep)[0]
+        current_privacy = "public" if "Public" in dashboard_path else "private"
+        # The line below correctly handles the switch in both directions
         new_privacy = "private" if current_privacy == "public" else "public"
         dashboard_name = os.path.basename(dashboard_path)
 
         new_path = os.path.join(base_dir, new_privacy, dashboard_name)
 
-        # Check if the destination path already exists in the index
-        dashboard_index = load_dashboard_index()
-        if any(d['name'] == dashboard_name and d['privacy'] == new_privacy for d in dashboard_index):
+        # Check if the destination path already exists
+        if os.path.exists(new_path):
             st.warning(f"A dashboard named '{dashboard_name}' already exists in the '{new_privacy}' gallery. Cannot switch privacy.")
             return
 
@@ -226,19 +127,11 @@ def switch_dashboard_privacy(dashboard_path):
             os.makedirs(new_privacy_dir)
 
         shutil.move(dashboard_path, new_path)
-
-        # Update the index file with the new path and privacy
-        for d in dashboard_index:
-            if d['path'] == dashboard_path:
-                d['path'] = new_path
-                d['privacy'] = new_privacy
-                break
-        save_dashboard_index(dashboard_index)
-
         st.success(f"Dashboard '{dashboard_name}' has been moved to the '{new_privacy}' gallery.")
 
     except Exception as e:
         st.error(f"Error switching privacy: {e}")
+
 
 def run_private_dashboard_gallery():
     """
@@ -259,10 +152,11 @@ def run_private_dashboard_gallery():
             st.warning("Please enter a name for the dashboard.")
         else:
             with st.spinner("Publishing..."):
+                # The 'save_session_state_to_dir' function is called here to save the dashboard.
                 success = save_session_state_to_dir(dashboard_name, privacy_setting)
             if success:
                 st.success(f"Dashboard '{dashboard_name}' has been published successfully as '{privacy_setting.lower()}'.")
-                st.rerun()
+                # st.balloons()
             else:
                 st.error("Failed to publish the dashboard. Please check the console for details.")
 
@@ -270,16 +164,26 @@ def run_private_dashboard_gallery():
     st.title("Manage Published Dashboards")
     st.markdown("Select a dashboard from the list below to load, delete, or change its privacy.")
 
-    # Load dashboards from the central JSON index file
-    all_dashboards = load_dashboard_index()
+    base_dir = "published_dashboards"
+
+    # Reload dashboards after any action
+    all_dashboards = []
+    if os.path.exists(base_dir):
+        for root, dirs, files in os.walk(base_dir):
+            if "config.json" in files:
+                rel_path = os.path.relpath(root, base_dir)
+                privacy = rel_path.split(os.path.sep)[0]
+                name = os.path.basename(root)
+                full_path = root
+                all_dashboards.append({"name": name, "path": full_path, "privacy": privacy})
 
     if all_dashboards:
         # Create a dictionary to map the display name to the full dashboard object
         display_to_dashboard_map = {f"{d['name']} ({d['privacy'].capitalize()})": d for d in all_dashboards}
         display_names = list(display_to_dashboard_map.keys())
 
-        # Use a single selectbox for all dashboards
-        selected_display_name = st.selectbox(
+        # Use a single radio button for all dashboards
+        selected_display_name = st.radio(
             "Select a dashboard:",
             display_names,
             key="combined_dashboard_selector"
@@ -294,25 +198,30 @@ def run_private_dashboard_gallery():
             with col1:
                 if st.button("Load Dashboard"):
                     with st.spinner("Loading..."):
+                        # This button triggers the 'load_session_state_from_dir' function.
                         load_session_state_from_dir(selected_path)
+                        st.session_state.logged_in = True
+
             with col2:
                 # Determine the current privacy to set the button label
                 current_privacy = selected_dashboard["privacy"]
-                new_privacy = "private" if current_privacy == "public" else "public"
+                print(current_privacy)
+                new_privacy = "private" if current_privacy == "Public" else "public"
                 if st.button(f"Switch to {new_privacy.capitalize()}"):
                     with st.spinner("Switching..."):
+                        # This button triggers the 'switch_dashboard_privacy' function.
                         switch_dashboard_privacy(selected_path)
                         st.rerun()
             with col3:
                 delete_confirmed = st.checkbox("Confirm Deletion", key="delete_confirm")
                 if st.button("Delete Dashboard", disabled=not delete_confirmed):
                     with st.spinner("Deleting..."):
+                        # This button triggers the 'delete_dashboard' function.
                         delete_dashboard(selected_path)
-                        st.rerun()
         else:
             st.info("No dashboard selected.")
     else:
         st.info("No published dashboards found.")
 
-# You would call this function in your Streamlit app to run the gallery.
-# run_private_dashboard_gallery()
+# The user-facing view, which could be integrated into a Streamlit app
+# as a page.
