@@ -17,14 +17,30 @@ from pages.public_dashboard_view import load_first_dashboard_for_testing_automat
 # load_first_dashboard_for_testing_automatic()
 
 # --- 2. DATA PREPARATION LOGIC (Runs in Streamlit's Thread) ---
-def find_free_port(default_port=8050):
-    """Binds a socket to port 0 to let the OS find a free port."""
-    try:
-        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-            s.bind(('', 0))
-            return s.getsockname()[1]
-    except OSError:
-        return default_port
+
+def find_free_port_in_range(start_port=8000, end_port=9000, default_port=8050):
+    """
+    Finds a free port within a specified range [start_port, end_port].
+
+    If no free port is found in the range, returns the default_port.
+    If the default_port is used and is not free, it may raise an OSError
+    when the caller attempts to use it, as this function can't guarantee
+    the default_port's availability.
+    """
+    for port in range(start_port, end_port + 1):
+        try:
+            # Create a socket using IPv4 and TCP
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                # Attempt to bind the socket to the port
+                s.bind(('', port))
+                # If bind succeeds, the port is free; return it
+                return port
+        except OSError:
+            # If bind fails (port is in use or outside allowed range), try the next port
+            continue
+
+    # If the loop finishes without finding a free port, return the default port
+    return default_port
 
 def prepare_dash_data_from_session_state(required_keys: list) -> tuple[str | None, str | None, str | None]:
     """
@@ -110,7 +126,7 @@ def prepare_dash_data_from_session_state(required_keys: list) -> tuple[str | Non
     # Store SIG_FEATS_LIST globally for dynamic slider callback input definition in Dash
     PYTHON_OBJECT_LOOKUP['SIG_FEATS_LIST'] = sig_feats
 
-# 4. Construct JSON-serializable App State
+    # 4. Construct JSON-serializable App State
     app_state = {
         "trained_models": dash_models_refs,
         "final_feature_importances": importances_store,
@@ -153,8 +169,8 @@ def  UseDashPrescriptiveAnalysis():
         st.stop()
 
     # Step 2: Configure and Start Dash server thread
-    DYNAMIC_PORT = find_free_port(default_port=8050)
-    DASH_APP_URL = f"http://localhost:{DYNAMIC_PORT}"
+    DYNAMIC_PORT = find_free_port_in_range(default_port=8050)
+    DASH_APP_URL = f"http://172.16.203.12:{DYNAMIC_PORT}"
 
     if 'dash_server_thread' not in st.__dict__:
         st.dash_server_thread = threading.Thread(

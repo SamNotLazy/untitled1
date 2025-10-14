@@ -27,16 +27,6 @@ from Dash_Pages.dash_prescription_detail import generate_detail_page_layout, reg
 # by Dash (server thread).
 PYTHON_OBJECT_LOOKUP = {}
 
-def find_free_port(default_port=8050):
-    """Finds an open port starting from a default."""
-    port = default_port
-    while port < default_port + 50:
-        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-            if s.connect_ex(('localhost', port)) != 0:
-                return port
-            port += 1
-    raise IOError("No free ports found.")
-
 
 
 # ==============================================================================
