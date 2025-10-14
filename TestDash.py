@@ -18,7 +18,7 @@ from pages.public_dashboard_view import load_first_dashboard_for_testing_automat
 
 # --- 2. DATA PREPARATION LOGIC (Runs in Streamlit's Thread) ---
 
-def find_free_port_in_range(start_port=8000, end_port=9000, default_port=8050):
+def find_free_port_in_range(start_port=8600, end_port=8700, default_port=8600):
     """
     Finds a free port within a specified range [start_port, end_port].
 
@@ -170,7 +170,7 @@ def  UseDashPrescriptiveAnalysis():
 
     # Step 2: Configure and Start Dash server thread
     DYNAMIC_PORT = find_free_port_in_range(default_port=8050)
-    DASH_APP_URL = f"http://172.16.203.12:{DYNAMIC_PORT}"
+    DASH_APP_URL = f"http://lki-ssm.iiitb.ac.in/{DYNAMIC_PORT}/"
 
     if 'dash_server_thread' not in st.__dict__:
         st.dash_server_thread = threading.Thread(
