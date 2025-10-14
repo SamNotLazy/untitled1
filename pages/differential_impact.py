@@ -239,6 +239,129 @@ def run_differential_impact_analysis():
         map_title="Geographic Distribution of Change",
         bar_title=f"{geo_unit_col}-wise Impact (Sorted)"
     )
+    
+    
+    
+    # =========================================
+    # Marginal change per feature (absolute Δ)
+    # =========================================
+    st.subheader("Marginal Change by Feature (others at 0%)")
+
+    # Helper: same prediction path as the main section
+    def _predict_df(Xdf):
+        if selected_model_name == "linear":
+            if scaler is None:
+                st.error("Scaler missing for linear model.")
+                st.stop()
+            Xs = scaler.transform(Xdf[feature_order])
+            if "final_feature_importances" in st.session_state:
+                uimp = st.session_state["final_feature_importances"][selected_model_name]
+                coef = uimp.set_index("Feature").reindex(feature_order)["Importance"].values
+                return Xs @ coef  # intercept cancels for deltas
+            else:
+                return model.predict(Xs)
+        else:
+            return model.predict(Xdf[feature_order])
+
+    # Pull direction metadata
+    direction = st.session_state.get("target_direction", "Increase")
+    pos = set(st.session_state.get("final_positive", []))
+    neg = set(st.session_state.get("final_negative", []))
+
+    # Baseline predictions (reuse exactly what main used)
+    # df["Predicted"] already computed above in your code
+    pred_base = df["Predicted"].to_numpy()
+
+    marginal_rows = []
+
+    for feat in intervene_feats:
+        # Start from original df (no other interventions)
+        df_only = df.copy()
+
+        pct = float(pct_changes.get(feat, 0.0))
+        sens = float(sensitivities.get(feat, 0.0))
+
+        # Apply ONLY this feature's intervention
+        df_only[feat] = df_only[feat] * (1 + sens * pct)
+
+        # Predict with same pipeline
+        pred_only = _predict_df(df_only)
+
+        # Raw change for this feature alone
+        change = pd.Series(pred_only - pred_base, index=df.index)
+
+        # Apply the SAME direction masking rules, but only for this feature
+        if direction == "Increase":
+            if feat in pos:
+                change = change.mask((pct > 0) & (change < 0), 0)
+                change = change.mask((pct < 0) & (change > 0), 0)
+            elif feat in neg:
+                change = change.mask((pct > 0) & (change > 0), 0)
+                change = change.mask((pct < 0) & (change < 0), 0)
+        elif direction == "Decrease":
+            if feat in pos:
+                change = change.mask((pct > 0) & (change > 0), 0)
+                change = change.mask((pct < 0) & (change < 0), 0)
+            elif feat in neg:
+                change = change.mask((pct > 0) & (change < 0), 0)
+                change = change.mask((pct < 0) & (change > 0), 0)
+
+        marginal_rows.append({"Feature": feat, "Avg Δ": float(change.mean())})
+
+    if marginal_rows:
+        marginal_df = pd.DataFrame(marginal_rows).sort_values("Avg Δ", ascending=True)
+
+        # If exactly one feature is intervened, this will match the scorecard mean
+        # (df_mod['Change'].mean()) by construction.
+        # Optional: tiny sanity caption
+        if len(marginal_df) == 1:
+            st.caption(
+                f"Sanity check: marginal Avg Δ = {marginal_df['Avg Δ'].iloc[0]:.4f} "
+                f"| scorecard Avg Δ = {df_mod['Change'].mean():.4f}"
+            )
+
+        
+        # same range as the map (zero-centered)
+        cmin = float(df_mod["Change"].min())
+        cmax = float(df_mod["Change"].max())
+        M = max(abs(cmin), abs(cmax))
+        cmin, cmax = -M, M   # symmetric around 0
+
+        fig_marginal = px.bar(
+            marginal_df,
+            y="Feature",
+            x="Avg Δ",
+            text="Avg Δ",
+            color="Avg Δ",                               # <- color by the value
+            color_continuous_scale=color_scale,          # <- same as map ("RdYlGn" or "RdYlGn_r")
+            range_color=(cmin, cmax),                    # <- same domain as map
+            color_continuous_midpoint=0,                 # <- diverging around zero
+            title="Marginal Average Change per Feature"
+        )
+
+        # (optional) hide the colorbar if you don't want it
+        fig_marginal.update_coloraxes(showscale=False)
+
+        # spacing/thickness
+        fig_marginal.update_traces(width=0.85, texttemplate="%{text:.2f}", textposition="outside", cliponaxis=False)
+        fig_marginal.update_layout(bargap=0.10, bargroupgap=0, height=360,
+                                xaxis_title=f"Average change in {target_col}", yaxis_title="",
+                                margin=dict(t=60, r=20, l=20, b=40), showlegend=False)
+
+
+        # Optional: smaller tick/label fonts for long feature names
+        fig_marginal.update_yaxes(automargin=True, tickfont=dict(size=11))
+        fig_marginal.update_xaxes(tickfont=dict(size=11))
+
+        
+
+        fig_marginal.update_yaxes(automargin=True, categoryorder="array",
+                                  categoryarray=marginal_df["Feature"].tolist())
+        #st.plotly_chart(fig_marginal, use_container_width=True)
+        st.plotly_chart(fig_marginal, use_container_width=True,
+                key=f"marginal_feat_{target_col}")
+    else:
+        st.info("Select at least one feature to see marginal changes.")
 
     # --- Final data table ---
     st.markdown("##### 📋 Modified Predictions per District")

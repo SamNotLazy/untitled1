@@ -1,0 +1,280 @@
+{
+    "target_direction": {
+        "value": "Increase",
+        "type": "str"
+    },
+    "gdf": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\gdf.geojson",
+        "type": "GeoDataFrame"
+    },
+    "selected_buckets": {
+        "value": [
+            "Demographics"
+        ],
+        "type": "list"
+    },
+    "selected_state": {
+        "value": "UTTAR PRADESH",
+        "type": "str"
+    },
+    "y_train": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\y_train.joblib",
+        "type": "joblib_file"
+    },
+    "factor_cols": {
+        "value": [
+            "Multidimensional Poverty Index (MPI)",
+            "Schools Without Electricity",
+            "Households Using Clean Cooking Fuel (%)",
+            "Schools With Functional Tap Water (%)"
+        ],
+        "type": "list"
+    },
+    "statistical_summary_all_df": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\statistical_summary_all_df.parquet",
+        "type": "DataFrame"
+    },
+    "custom_params": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\custom_params.joblib",
+        "type": "joblib_file"
+    },
+    "target_bounds": {
+        "value": [
+            44.48504732328784,
+            73.728813559322
+        ],
+        "type": "tuple"
+    },
+    "X_train": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\X_train.parquet",
+        "type": "DataFrame"
+    },
+    "intervene_feats": {
+        "value": [],
+        "type": "list"
+    },
+    "best_params": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\best_params.joblib",
+        "type": "joblib_file"
+    },
+    "unmatched_upload": {
+        "value": [],
+        "type": "list"
+    },
+    "missing_geo": {
+        "value": [],
+        "type": "list"
+    },
+    "match_df": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\match_df.parquet",
+        "type": "DataFrame"
+    },
+    "geo_sim_thresh": {
+        "value": 80,
+        "type": "int"
+    },
+    "feature_buckets_grouped": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\feature_buckets_grouped.joblib",
+        "type": "joblib_file"
+    },
+    "merge_history": {
+        "value": [],
+        "type": "list"
+    },
+    "df_final": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\df_final.parquet",
+        "type": "DataFrame"
+    },
+    "all_feats_pool": {
+        "value": [
+            "Households Using Clean Cooking Fuel (%)",
+            "Multidimensional Poverty Index (MPI)",
+            "Schools With Functional Tap Water (%)",
+            "Schools Without Electricity"
+        ],
+        "type": "list"
+    },
+    "trigger_scroll_to_top": {
+        "value": false,
+        "type": "bool"
+    },
+    "public_sub_page": {
+        "value": "Public Dashboard Gallery",
+        "type": "str"
+    },
+    "merge_pool": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\merge_pool.joblib",
+        "type": "joblib_file"
+    },
+    "engineered_fields": {
+        "value": [],
+        "type": "list"
+    },
+    "feature_bounds": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\feature_bounds.joblib",
+        "type": "joblib_file"
+    },
+    "use_standardized": {
+        "value": true,
+        "type": "bool"
+    },
+    "feature_bucket_map": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\feature_bucket_map.joblib",
+        "type": "joblib_file"
+    },
+    "show_hparam_expander": {
+        "value": false,
+        "type": "bool"
+    },
+    "bucket_lists": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\bucket_lists.joblib",
+        "type": "joblib_file"
+    },
+    "buckets": {
+        "value": [
+            "Demographics",
+            "Infrastructure",
+            "Linguistics",
+            "Economics"
+        ],
+        "type": "list"
+    },
+    "final_negative": {
+        "value": [
+            "Households Using Clean Cooking Fuel (%)",
+            "Schools With Functional Tap Water (%)"
+        ],
+        "type": "list"
+    },
+    "logged_in": {
+        "value": true,
+        "type": "bool"
+    },
+    "delete_confirm": {
+        "value": false,
+        "type": "bool"
+    },
+    "geo_unit_col": {
+        "value": "district",
+        "type": "str"
+    },
+    "uploaded_df": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\uploaded_df.parquet",
+        "type": "DataFrame"
+    },
+    "final_feature_importances": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\final_feature_importances.joblib",
+        "type": "joblib_file"
+    },
+    "logged_in_main_section": {
+        "value": "Home",
+        "type": "str"
+    },
+    "X_test": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\X_test.parquet",
+        "type": "DataFrame"
+    },
+    "GEO_COL": {
+        "value": "dtname",
+        "type": "str"
+    },
+    "pct_changes": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\pct_changes.joblib",
+        "type": "joblib_file"
+    },
+    "final_positive": {
+        "value": [
+            "Multidimensional Poverty Index (MPI)",
+            "Schools Without Electricity"
+        ],
+        "type": "list"
+    },
+    "scaler": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\scaler.joblib",
+        "type": "joblib_file"
+    },
+    "ingested_ids": {
+        "value": "{'casefile_v1_UTTAR_PRADESH_2023_24_UP_Secondary_Total_rural_merged_renamed_sec.xlsx:21710'}",
+        "type": "str"
+    },
+    "mapping": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\mapping.joblib",
+        "type": "joblib_file"
+    },
+    "selected_models": {
+        "value": [
+            "linear",
+            "xgb"
+        ],
+        "type": "list"
+    },
+    "feature_schemes": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\feature_schemes.joblib",
+        "type": "joblib_file"
+    },
+    "logged_in_sub_page": {
+        "value": "Intervention Setup",
+        "type": "str"
+    },
+    "feature_bucket_mapping_df": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\feature_bucket_mapping_df.parquet",
+        "type": "DataFrame"
+    },
+    "final_neutral": {
+        "value": [],
+        "type": "list"
+    },
+    "agg_map": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\agg_map.joblib",
+        "type": "joblib_file"
+    },
+    "trained_models": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\trained_models.joblib",
+        "type": "joblib_file"
+    },
+    "grouped_df": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\grouped_df.parquet",
+        "type": "DataFrame"
+    },
+    "final_selected_features": {
+        "value": [
+            "Multidimensional Poverty Index (MPI)",
+            "Schools Without Electricity",
+            "Households Using Clean Cooking Fuel (%)",
+            "Schools With Functional Tap Water (%)"
+        ],
+        "type": "list"
+    },
+    "feature_importances": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\feature_importances.joblib",
+        "type": "joblib_file"
+    },
+    "target_col": {
+        "value": "Computer Labs Not Equipped (%)",
+        "type": "str"
+    },
+    "combined_dashboard_selector": {
+        "value": "s1 (Public)",
+        "type": "str"
+    },
+    "pre_login_page": {
+        "value": "Login",
+        "type": "str"
+    },
+    "columns_confirmed": {
+        "value": true,
+        "type": "bool"
+    },
+    "sensitivities": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\sensitivities.joblib",
+        "type": "joblib_file"
+    },
+    "final_models": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\final_models.joblib",
+        "type": "joblib_file"
+    },
+    "y_test": {
+        "value": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83\\y_test.joblib",
+        "type": "joblib_file"
+    }
+}

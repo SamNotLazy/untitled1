@@ -1,0 +1,293 @@
+{
+    "df_final": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\df_final.parquet",
+        "type": "DataFrame"
+    },
+    "all_feats_pool": {
+        "value": [
+            "Multidimensional Poverty Index (MPI)",
+            "Schools With Functional Tap Water (%)"
+        ],
+        "type": "list"
+    },
+    "public_sub_page": {
+        "value": "Public Dashboard Gallery",
+        "type": "str"
+    },
+    "X_test": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\X_test.parquet",
+        "type": "DataFrame"
+    },
+    "match_df": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\match_df.parquet",
+        "type": "DataFrame"
+    },
+    "pre_login_page": {
+        "value": "Login",
+        "type": "str"
+    },
+    "target_bounds": {
+        "value": [
+            0.0,
+            20.3
+        ],
+        "type": "tuple"
+    },
+    "missing_geo": {
+        "value": [],
+        "type": "list"
+    },
+    "feature_bucket_map": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\feature_bucket_map.joblib",
+        "type": "joblib_file"
+    },
+    "custom_params": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\custom_params.joblib",
+        "type": "joblib_file"
+    },
+    "intervene_feats": {
+        "value": [],
+        "type": "list"
+    },
+    "district_allocations": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\district_allocations.parquet",
+        "type": "DataFrame"
+    },
+    "trained_models": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\trained_models.joblib",
+        "type": "joblib_file"
+    },
+    "columns_confirmed": {
+        "value": true,
+        "type": "bool"
+    },
+    "logged_in_main_section": {
+        "value": "Home",
+        "type": "str"
+    },
+    "logged_in_sub_page": {
+        "value": "Intervention Setup",
+        "type": "str"
+    },
+    "geo_sim_thresh": {
+        "value": 80,
+        "type": "int"
+    },
+    "gdf": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\gdf.geojson",
+        "type": "GeoDataFrame"
+    },
+    "statistical_summary_all_df": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\statistical_summary_all_df.parquet",
+        "type": "DataFrame"
+    },
+    "pct_changes": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\pct_changes.joblib",
+        "type": "joblib_file"
+    },
+    "feature_budgets": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\feature_budgets.joblib",
+        "type": "joblib_file"
+    },
+    "selected_buckets": {
+        "value": [],
+        "type": "list"
+    },
+    "buckets": {
+        "value": [
+            "Demographics",
+            "Infrastructure",
+            "Linguistics",
+            "Economics"
+        ],
+        "type": "list"
+    },
+    "unmatched_upload": {
+        "value": [],
+        "type": "list"
+    },
+    "agg_map": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\agg_map.joblib",
+        "type": "joblib_file"
+    },
+    "y_train": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\y_train.joblib",
+        "type": "joblib_file"
+    },
+    "use_standardized": {
+        "value": true,
+        "type": "bool"
+    },
+    "ingested_ids": {
+        "value": "{'casefile_v1_UTTAR_PRADESH_2023_24_UP_Secondary_Total_rural_merged_renamed_sec.xlsx:21710'}",
+        "type": "str"
+    },
+    "final_positive": {
+        "value": [
+            "Multidimensional Poverty Index (MPI)"
+        ],
+        "type": "list"
+    },
+    "engineered_fields": {
+        "value": [],
+        "type": "list"
+    },
+    "factor_cols": {
+        "value": [
+            "Schools Without Electricity",
+            "Schools With Functional Tap Water (%)",
+            "Multidimensional Poverty Index (MPI)"
+        ],
+        "type": "list"
+    },
+    "prescriptive_filtered_feats": {
+        "value": [
+            "Multidimensional Poverty Index (MPI)",
+            "Schools With Functional Tap Water (%)"
+        ],
+        "type": "list"
+    },
+    "scaler": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\scaler.joblib",
+        "type": "joblib_file"
+    },
+    "final_feature_importances": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\final_feature_importances.joblib",
+        "type": "joblib_file"
+    },
+    "final_models": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\final_models.joblib",
+        "type": "joblib_file"
+    },
+    "selected_models": {
+        "value": [
+            "linear"
+        ],
+        "type": "list"
+    },
+    "target_direction": {
+        "value": "Increase",
+        "type": "str"
+    },
+    "feature_bucket_mapping_df": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\feature_bucket_mapping_df.parquet",
+        "type": "DataFrame"
+    },
+    "feature_bounds": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\feature_bounds.joblib",
+        "type": "joblib_file"
+    },
+    "merge_history": {
+        "value": [],
+        "type": "list"
+    },
+    "geo_unit_col": {
+        "value": "district",
+        "type": "str"
+    },
+    "final_negative": {
+        "value": [
+            "Schools With Functional Tap Water (%)"
+        ],
+        "type": "list"
+    },
+    "y_test": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\y_test.joblib",
+        "type": "joblib_file"
+    },
+    "grouped_df": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\grouped_df.parquet",
+        "type": "DataFrame"
+    },
+    "show_budget_results": {
+        "value": true,
+        "type": "bool"
+    },
+    "target_val": {
+        "value": 16.290000000000003,
+        "type": "float"
+    },
+    "feature_schemes": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\feature_schemes.joblib",
+        "type": "joblib_file"
+    },
+    "uploaded_df": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\uploaded_df.parquet",
+        "type": "DataFrame"
+    },
+    "feature_buckets_grouped": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\feature_buckets_grouped.joblib",
+        "type": "joblib_file"
+    },
+    "show_download_options": {
+        "value": true,
+        "type": "bool"
+    },
+    "trigger_scroll_to_top": {
+        "value": false,
+        "type": "bool"
+    },
+    "final_selected_features": {
+        "value": [
+            "Multidimensional Poverty Index (MPI)",
+            "Schools With Functional Tap Water (%)"
+        ],
+        "type": "list"
+    },
+    "show_hparam_expander": {
+        "value": false,
+        "type": "bool"
+    },
+    "logged_in": {
+        "value": true,
+        "type": "bool"
+    },
+    "sensitivities": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\sensitivities.joblib",
+        "type": "joblib_file"
+    },
+    "allocation_mode": {
+        "value": "inverse",
+        "type": "str"
+    },
+    "feature_importances": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\feature_importances.joblib",
+        "type": "joblib_file"
+    },
+    "GEO_COL": {
+        "value": "dtname",
+        "type": "str"
+    },
+    "target_col": {
+        "value": "Secondary Dropout Rate",
+        "type": "str"
+    },
+    "X_train": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\X_train.parquet",
+        "type": "DataFrame"
+    },
+    "merge_pool": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\merge_pool.joblib",
+        "type": "joblib_file"
+    },
+    "mapping": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\mapping.joblib",
+        "type": "joblib_file"
+    },
+    "bucket_lists": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\bucket_lists.joblib",
+        "type": "joblib_file"
+    },
+    "final_neutral": {
+        "value": [],
+        "type": "list"
+    },
+    "selected_state": {
+        "value": "UTTAR PRADESH",
+        "type": "str"
+    },
+    "best_params": {
+        "value": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519\\best_params.joblib",
+        "type": "joblib_file"
+    }
+}

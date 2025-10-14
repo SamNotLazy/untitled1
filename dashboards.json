@@ -1,1 +1,14 @@
-[]
+[
+    {
+        "id": "f8153953-e905-426b-afed-35cb2328f519",
+        "name": "s1",
+        "privacy": "Public",
+        "path": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519"
+    },
+    {
+        "id": "96bb2694-dcf4-4788-8013-5e7b30afaa83",
+        "name": "s2",
+        "privacy": "Public",
+        "path": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83"
+    }
+]
