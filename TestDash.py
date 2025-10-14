@@ -210,7 +210,7 @@ def  UseDashPrescriptiveAnalysis():
     iframe_html = f"""
     <div class="iframe-container" style="height: {IFRAME_HEIGHT}px;">
         <iframe
-            src="{DASH_APP_URL}"
+            src=f"http://127.0.0.1:{DYNAMIC_PORT}"
             style="width: 100%; height: 100%; border: none; padding: 0;"
             title="Embedded Dash Application"
         ></iframe>
@@ -225,10 +225,7 @@ def  UseDashPrescriptiveAnalysis():
             label="🚀 **Open this Dashboard on a new Page** 🚀",
             icon="👉" # Add a directional icon
         )
-    def open_page(url):
-        # This function uses JavaScript to open the target URL in a new tab
-        js_code = f"window.open('{url}', '_blank');"
-        st.html(f"<script>{js_code}</script>")
+
 
     st.info("Note that this page is embedding using a third party server it is preferred to view this page in a new tab")
     # st.link_button()
