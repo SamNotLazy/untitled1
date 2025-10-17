@@ -3,7 +3,6 @@ import importlib
 import traceback
 import streamlit as st
 
-from TestDash import UseDashPrescriptiveAnalysis
 from pages.public_dashboard_view import run_public_dashboard_view
 from pages.home import run_home
 from pages.intervention_setup import run_intervention_setup
@@ -151,7 +150,7 @@ if not st.session_state.logged_in:
         if st.session_state["public_sub_page"] == "Differential Impact Analysis":
             run_differential_impact_analysis()
         elif st.session_state["public_sub_page"] == "Prescriptive Modelling":
-            UseDashPrescriptiveAnalysis()
+            run_prescriptive_modelling()
         elif st.session_state["public_sub_page"] == "Budget Allocation":
             run_budget_allocation()
 
@@ -189,7 +188,7 @@ else:
         elif sub_page == "Differential Impact Analysis":
             run_differential_impact_analysis()
         elif sub_page == "Prescriptive Modelling":
-            UseDashPrescriptiveAnalysis()
+            run_prescriptive_modelling()
         elif sub_page == "Budget Allocation":
             run_budget_allocation()
 
@@ -209,7 +208,7 @@ else:
         elif sub_page == "Differential Impact Analysis":
             run_differential_impact_analysis()
         elif sub_page == "Prescriptive Modelling":
-            UseDashPrescriptiveAnalysis()
+            run_prescriptive_modelling()
         elif sub_page == "Budget Allocation":
             run_budget_allocation()
 

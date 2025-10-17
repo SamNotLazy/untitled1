@@ -172,15 +172,15 @@ def  UseDashPrescriptiveAnalysis():
     DYNAMIC_PORT = find_free_port_in_range(default_port=8050)
     DASH_APP_URL = f"http://lki-ssm.iiitb.ac.in/{DYNAMIC_PORT}/"
 
-    if 'dash_server_thread' not in st.__dict__:
-        st.dash_server_thread = threading.Thread(
+    if 'dash_server_thread' not in st.session_state:
+        st.session_state.dash_server_thread = threading.Thread(
             target=run_dash_server_thread_target,
             args=(df_json, app_state_json, geo_col, DYNAMIC_PORT),
             daemon=True
         )
-        st.dash_server_thread.start()
-        time.sleep(2) # Give the server a moment to spin up
-        print(f"Dash Server successfully initialized in thread on {DASH_APP_URL}")
+    st.session_state.dash_server_thread.start()
+    time.sleep(2) # Give the server a moment to spin up
+    print(f"Dash Server successfully initialized in thread on {DASH_APP_URL}")
 
 
     st.markdown("""
@@ -211,6 +211,15 @@ def  UseDashPrescriptiveAnalysis():
     <div class="iframe-container" style="height: {IFRAME_HEIGHT}px;">
         <iframe
             src=f"http://127.0.0.1:{DYNAMIC_PORT}"
+            style="width: 100%; height: 100%; border: none; padding: 0;"
+            title="Embedded Dash Application"
+        ></iframe>
+    </div>
+    """
+    iframe_html2 = f"""
+    <div class="iframe-container" style="height: {IFRAME_HEIGHT}px;">
+        <iframe
+            src=f"{DASH_APP_URL}"
             style="width: 100%; height: 100%; border: none; padding: 0;"
             title="Embedded Dash Application"
         ></iframe>

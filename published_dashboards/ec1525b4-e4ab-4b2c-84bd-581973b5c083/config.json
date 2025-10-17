@@ -1,0 +1,304 @@
+{
+    "sensitivities": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\sensitivities.joblib",
+        "type": "joblib_file"
+    },
+    "new_dashboard_name_input": {
+        "value": "Sample1",
+        "type": "str"
+    },
+    "columns_confirmed": {
+        "value": true,
+        "type": "bool"
+    },
+    "bucket_lists": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\bucket_lists.joblib",
+        "type": "joblib_file"
+    },
+    "default_selection_applied": {
+        "value": true,
+        "type": "bool"
+    },
+    "geo_unit_col": {
+        "value": "district",
+        "type": "str"
+    },
+    "unmatched_upload": {
+        "value": [],
+        "type": "list"
+    },
+    "public_sub_page": {
+        "value": "Public Dashboard Gallery",
+        "type": "str"
+    },
+    "match_df": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\match_df.parquet",
+        "type": "DataFrame"
+    },
+    "feature_bucket_map": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\feature_bucket_map.joblib",
+        "type": "joblib_file"
+    },
+    "pct_changes": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\pct_changes.joblib",
+        "type": "joblib_file"
+    },
+    "show_hparam_expander": {
+        "value": false,
+        "type": "bool"
+    },
+    "feature_schemes": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\feature_schemes.joblib",
+        "type": "joblib_file"
+    },
+    "selected_districts": {
+        "value": [],
+        "type": "list"
+    },
+    "selected_buckets": {
+        "value": [],
+        "type": "list"
+    },
+    "trained_models": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\trained_models.joblib",
+        "type": "joblib_file"
+    },
+    "uploaded_df": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\uploaded_df.parquet",
+        "type": "DataFrame"
+    },
+    "target_col": {
+        "value": "Multidimensional Poverty Index (MPI)",
+        "type": "str"
+    },
+    "custom_params": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\custom_params.joblib",
+        "type": "joblib_file"
+    },
+    "selected_state": {
+        "value": "UTTAR PRADESH",
+        "type": "str"
+    },
+    "X_test": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\X_test.parquet",
+        "type": "DataFrame"
+    },
+    "final_neutral": {
+        "value": [],
+        "type": "list"
+    },
+    "publish_new_button_unloaded": {
+        "value": true,
+        "type": "bool"
+    },
+    "all_feats_pool": {
+        "value": [
+            "Computer Labs Not Equipped (%)",
+            "Schools With Pucca Boundary Walls (%)",
+            "Schools Without Electricity",
+            "Women (20\u201324) Married Before 18 (%)"
+        ],
+        "type": "list"
+    },
+    "y_test": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\y_test.joblib",
+        "type": "joblib_file"
+    },
+    "logged_in": {
+        "value": true,
+        "type": "bool"
+    },
+    "feature_bounds": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\feature_bounds.joblib",
+        "type": "joblib_file"
+    },
+    "merge_history": {
+        "value": [],
+        "type": "list"
+    },
+    "intervene_feats": {
+        "value": [],
+        "type": "list"
+    },
+    "df_final": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\df_final.parquet",
+        "type": "DataFrame"
+    },
+    "missing_geo": {
+        "value": [],
+        "type": "list"
+    },
+    "geo_sim_thresh": {
+        "value": 80,
+        "type": "int"
+    },
+    "best_params": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\best_params.joblib",
+        "type": "joblib_file"
+    },
+    "pre_login_page": {
+        "value": "Public Dashboards",
+        "type": "str"
+    },
+    "final_feature_importances": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\final_feature_importances.joblib",
+        "type": "joblib_file"
+    },
+    "scaler": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\scaler.joblib",
+        "type": "joblib_file"
+    },
+    "target_direction": {
+        "value": "Increase",
+        "type": "str"
+    },
+    "buckets": {
+        "value": [
+            "Demographics",
+            "Infrastructure",
+            "Linguistics",
+            "Economics"
+        ],
+        "type": "list"
+    },
+    "trigger_scroll_to_top": {
+        "value": false,
+        "type": "bool"
+    },
+    "logged_in_main_section": {
+        "value": "Home",
+        "type": "str"
+    },
+    "prescriptive_filtered_feats": {
+        "value": [
+            "Schools Without Electricity",
+            "Women (20\u201324) Married Before 18 (%)",
+            "Computer Labs Not Equipped (%)",
+            "Schools With Pucca Boundary Walls (%)"
+        ],
+        "type": "list"
+    },
+    "feature_bucket_mapping_df": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\feature_bucket_mapping_df.parquet",
+        "type": "DataFrame"
+    },
+    "final_selected_features": {
+        "value": [
+            "Schools Without Electricity",
+            "Women (20\u201324) Married Before 18 (%)",
+            "Computer Labs Not Equipped (%)",
+            "Schools With Pucca Boundary Walls (%)"
+        ],
+        "type": "list"
+    },
+    "feature_buckets_grouped": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\feature_buckets_grouped.joblib",
+        "type": "joblib_file"
+    },
+    "agg_map": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\agg_map.joblib",
+        "type": "joblib_file"
+    },
+    "gdf": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\gdf.geojson",
+        "type": "GeoDataFrame"
+    },
+    "target_bounds": {
+        "value": [
+            0.03,
+            0.20850000000000002
+        ],
+        "type": "tuple"
+    },
+    "new_privacy_radio": {
+        "value": "Public",
+        "type": "str"
+    },
+    "merge_pool": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\merge_pool.joblib",
+        "type": "joblib_file"
+    },
+    "X_train": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\X_train.parquet",
+        "type": "DataFrame"
+    },
+    "final_negative": {
+        "value": [
+            "Schools With Pucca Boundary Walls (%)"
+        ],
+        "type": "list"
+    },
+    "use_standardized": {
+        "value": true,
+        "type": "bool"
+    },
+    "logged_in_sub_page": {
+        "value": "Intervention Setup",
+        "type": "str"
+    },
+    "final_positive": {
+        "value": [
+            "Schools Without Electricity",
+            "Women (20\u201324) Married Before 18 (%)",
+            "Computer Labs Not Equipped (%)"
+        ],
+        "type": "list"
+    },
+    "mapping": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\mapping.joblib",
+        "type": "joblib_file"
+    },
+    "target_val": {
+        "value": 5.1,
+        "type": "float"
+    },
+    "factor_cols": {
+        "value": [
+            "Schools With Pucca Boundary Walls (%)",
+            "Schools Without Electricity",
+            "Women (20\u201324) Married Before 18 (%)",
+            "Computer Labs Not Equipped (%)"
+        ],
+        "type": "list"
+    },
+    "engineered_fields": {
+        "value": [],
+        "type": "list"
+    },
+    "grouped_df": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\grouped_df.parquet",
+        "type": "DataFrame"
+    },
+    "final_models": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\final_models.joblib",
+        "type": "joblib_file"
+    },
+    "ingested_ids": {
+        "value": "{'casefile_v1_UTTAR_PRADESH_2023_24_UP_Secondary_Total_rural_merged_renamed_sec.xlsx:21710'}",
+        "type": "str"
+    },
+    "GEO_COL": {
+        "value": "dtname",
+        "type": "str"
+    },
+    "selected_models": {
+        "value": [
+            "linear",
+            "rf",
+            "xgb"
+        ],
+        "type": "list"
+    },
+    "statistical_summary_all_df": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\statistical_summary_all_df.parquet",
+        "type": "DataFrame"
+    },
+    "y_train": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\y_train.joblib",
+        "type": "joblib_file"
+    },
+    "feature_importances": {
+        "value": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083\\feature_importances.joblib",
+        "type": "joblib_file"
+    }
+}

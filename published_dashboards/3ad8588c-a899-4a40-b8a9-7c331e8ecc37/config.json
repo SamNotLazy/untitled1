@@ -1,0 +1,316 @@
+{
+    "final_models": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\final_models.joblib",
+        "type": "joblib_file"
+    },
+    "agg_map": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\agg_map.joblib",
+        "type": "joblib_file"
+    },
+    "feature_bucket_map": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\feature_bucket_map.joblib",
+        "type": "joblib_file"
+    },
+    "feature_importances": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\feature_importances.joblib",
+        "type": "joblib_file"
+    },
+    "engineered_fields": {
+        "value": [],
+        "type": "list"
+    },
+    "selected_buckets": {
+        "value": [],
+        "type": "list"
+    },
+    "feature_buckets_grouped": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\feature_buckets_grouped.joblib",
+        "type": "joblib_file"
+    },
+    "delete_confirm": {
+        "value": false,
+        "type": "bool"
+    },
+    "final_selected_features": {
+        "value": [
+            "Women (20\u201324) Married Before 18 (%)",
+            "Multidimensional Poverty Index (MPI)",
+            "Schools With Pucca Boundary Walls (%)",
+            "Schools With Functional Tap Water (%)"
+        ],
+        "type": "list"
+    },
+    "trigger_scroll_to_top": {
+        "value": false,
+        "type": "bool"
+    },
+    "df_final": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\df_final.parquet",
+        "type": "DataFrame"
+    },
+    "geo_unit_col": {
+        "value": "district",
+        "type": "str"
+    },
+    "feature_schemes": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\feature_schemes.joblib",
+        "type": "joblib_file"
+    },
+    "prescriptive_detail_color_scale": {
+        "value": "RdYlGn_r",
+        "type": "str"
+    },
+    "prescriptive_detail_plot_df": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\prescriptive_detail_plot_df.geojson",
+        "type": "GeoDataFrame"
+    },
+    "statistical_summary_all_df": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\statistical_summary_all_df.parquet",
+        "type": "DataFrame"
+    },
+    "GEO_COL": {
+        "value": "dtname",
+        "type": "str"
+    },
+    "pct_changes": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\pct_changes.joblib",
+        "type": "joblib_file"
+    },
+    "final_feature_importances": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\final_feature_importances.joblib",
+        "type": "joblib_file"
+    },
+    "target_col": {
+        "value": "Secondary Dropout Rate",
+        "type": "str"
+    },
+    "public_sub_page": {
+        "value": "Public Dashboard Gallery",
+        "type": "str"
+    },
+    "gdf": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\gdf.geojson",
+        "type": "GeoDataFrame"
+    },
+    "grouped_df": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\grouped_df.parquet",
+        "type": "DataFrame"
+    },
+    "prescriptive_filtered_feats": {
+        "value": [
+            "Women (20\u201324) Married Before 18 (%)",
+            "Multidimensional Poverty Index (MPI)",
+            "Schools With Pucca Boundary Walls (%)",
+            "Schools With Functional Tap Water (%)"
+        ],
+        "type": "list"
+    },
+    "geo_sim_thresh": {
+        "value": 80,
+        "type": "int"
+    },
+    "prescriptive_detail_df_original": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\prescriptive_detail_df_original.parquet",
+        "type": "DataFrame"
+    },
+    "currently_selected_districts": {
+        "value": [],
+        "type": "list"
+    },
+    "uploaded_df": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\uploaded_df.parquet",
+        "type": "DataFrame"
+    },
+    "X_train": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\X_train.parquet",
+        "type": "DataFrame"
+    },
+    "custom_params": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\custom_params.joblib",
+        "type": "joblib_file"
+    },
+    "scaler": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\scaler.joblib",
+        "type": "joblib_file"
+    },
+    "best_params": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\best_params.joblib",
+        "type": "joblib_file"
+    },
+    "buckets": {
+        "value": [
+            "Demographics",
+            "Infrastructure",
+            "Linguistics",
+            "Economics"
+        ],
+        "type": "list"
+    },
+    "show_hparam_expander": {
+        "value": false,
+        "type": "bool"
+    },
+    "use_standardized": {
+        "value": true,
+        "type": "bool"
+    },
+    "combined_dashboard_selector": {
+        "value": "Sample1 (Public)",
+        "type": "str"
+    },
+    "final_neutral": {
+        "value": [
+            "Schools With Functional Tap Water (%)"
+        ],
+        "type": "list"
+    },
+    "missing_geo": {
+        "value": [],
+        "type": "list"
+    },
+    "show_big_popover": {
+        "value": false,
+        "type": "bool"
+    },
+    "columns_confirmed": {
+        "value": true,
+        "type": "bool"
+    },
+    "final_negative": {
+        "value": [
+            "Schools With Pucca Boundary Walls (%)"
+        ],
+        "type": "list"
+    },
+    "prescriptive_detail_df_modified": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\prescriptive_detail_df_modified.parquet",
+        "type": "DataFrame"
+    },
+    "selected_models": {
+        "value": [
+            "linear",
+            "rf"
+        ],
+        "type": "list"
+    },
+    "mapping": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\mapping.joblib",
+        "type": "joblib_file"
+    },
+    "target_bounds": {
+        "value": [
+            0.0,
+            20.3
+        ],
+        "type": "tuple"
+    },
+    "feature_bucket_mapping_df": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\feature_bucket_mapping_df.parquet",
+        "type": "DataFrame"
+    },
+    "ingested_ids": {
+        "value": "{'casefile_v1_UTTAR_PRADESH_2023_24_UP_Secondary_Total_rural_merged_renamed_sec.xlsx:21710'}",
+        "type": "str"
+    },
+    "feature_bounds": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\feature_bounds.joblib",
+        "type": "joblib_file"
+    },
+    "selected_state": {
+        "value": "UTTAR PRADESH",
+        "type": "str"
+    },
+    "logged_in_main_section": {
+        "value": "Home",
+        "type": "str"
+    },
+    "factor_cols": {
+        "value": [
+            "Women (20\u201324) Married Before 18 (%)",
+            "Multidimensional Poverty Index (MPI)",
+            "Schools With Pucca Boundary Walls (%)",
+            "Schools With Functional Tap Water (%)"
+        ],
+        "type": "list"
+    },
+    "target_val": {
+        "value": 6.279999999999999,
+        "type": "float"
+    },
+    "merge_history": {
+        "value": [],
+        "type": "list"
+    },
+    "pre_login_page": {
+        "value": "Login",
+        "type": "str"
+    },
+    "match_df": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\match_df.parquet",
+        "type": "DataFrame"
+    },
+    "y_test": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\y_test.joblib",
+        "type": "joblib_file"
+    },
+    "bucket_lists": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\bucket_lists.joblib",
+        "type": "joblib_file"
+    },
+    "y_train": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\y_train.joblib",
+        "type": "joblib_file"
+    },
+    "logged_in": {
+        "value": true,
+        "type": "bool"
+    },
+    "target_direction": {
+        "value": "Decrease",
+        "type": "str"
+    },
+    "intervene_feats": {
+        "value": [],
+        "type": "list"
+    },
+    "sensitivities": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\sensitivities.joblib",
+        "type": "joblib_file"
+    },
+    "logged_in_sub_page": {
+        "value": "Intervention Setup",
+        "type": "str"
+    },
+    "merge_pool": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\merge_pool.joblib",
+        "type": "joblib_file"
+    },
+    "final_positive": {
+        "value": [
+            "Women (20\u201324) Married Before 18 (%)",
+            "Multidimensional Poverty Index (MPI)"
+        ],
+        "type": "list"
+    },
+    "unmatched_upload": {
+        "value": [],
+        "type": "list"
+    },
+    "X_test": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\X_test.parquet",
+        "type": "DataFrame"
+    },
+    "all_feats_pool": {
+        "value": [
+            "Multidimensional Poverty Index (MPI)",
+            "Schools With Functional Tap Water (%)",
+            "Schools With Pucca Boundary Walls (%)",
+            "Women (20\u201324) Married Before 18 (%)"
+        ],
+        "type": "list"
+    },
+    "trained_models": {
+        "value": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37\\trained_models.joblib",
+        "type": "joblib_file"
+    }
+}

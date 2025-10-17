@@ -1,7 +1,5 @@
 import json
 import os
-import time
-
 import joblib
 import streamlit as st
 import pandas as pd
@@ -85,20 +83,7 @@ def load_session_state_from_dir(dashboard_path):
 
             # If all items are loaded successfully, set the flag to True
             st.session_state.dashboard_loaded = True
-            message = f"Dashboard '{os.path.basename(dashboard_path)}' loaded successfully! ✅"
-
-            # 2. Create a placeholder in the app
-            # The placeholder is an empty container where your message will go.
-            placeholder = st.empty()
-
-            # 3. Display the message inside the placeholder using st.success()
-            placeholder.success(message)
-
-            # 4. Wait for the desired duration (e.g., 3 seconds)
-            time.sleep(1)
-
-            # 5. Clear the placeholder to make the message disappear
-            placeholder.empty()
+            st.success(f"Dashboard '{os.path.basename(dashboard_path)}' loaded successfully!")
         except Exception as e:
             st.error(f"Error loading dashboard: {e}")
             st.session_state.dashboard_loaded = False
@@ -137,45 +122,6 @@ def run_public_dashboard_view():
                         st.session_state.logged_in = False
     else:
         st.info("No public dashboards found.")
-
-def load_first_dashboard_for_testing_automatic():
-    """
-    Automatically attempts to load the first available dashboard
-    and displays the results and loaded session state keys.
-    """
-
-    all_dashboards = get_dashboards_from_json()
-    loaded_name = st.session_state.get("loaded_dashboard_name")
-
-    if not all_dashboards:
-        st.warning(f"❌ No published dashboards found in **{DASHBOARD_FILE}**.")
-        st.info("Please publish a dashboard using your main app first.")
-        return
-
-    first_dashboard = all_dashboards[0]
-    dashboard_name = first_dashboard.get("name", "Unknown Dashboard")
-    dashboard_path = first_dashboard.get("path")
-
-
-
-    # --- CORE AUTO-LOAD LOGIC ---
-    if loaded_name != dashboard_name:
-        # Only load if it hasn't been loaded yet in this session
-        with st.spinner(f"**AUTO-LOADING** session state from {dashboard_path}..."):
-            try:
-                # 1. Load the data into st.session_state
-                load_session_state_from_dir(dashboard_path)
-                st.session_state["loaded_dashboard_name"] = dashboard_name
-
-                # st.success(f"✅ Automatically loaded dashboard **{dashboard_name}**!")
-                # st.rerun() # Typically not needed here unless the loaded state dramatically changes the layout above this point.
-
-            except Exception as e:
-                st.error(f"❌ Failed to load dashboard **{dashboard_name}**.")
-                st.exception(e)
-    else:
-        st.success(f"✅ Dashboard **{dashboard_name}** is already loaded.")
-
 
 
 # This block ensures the script can be run directly as a Streamlit app

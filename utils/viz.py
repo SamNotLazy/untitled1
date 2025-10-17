@@ -141,11 +141,11 @@ def plot_charts(change_df, color_scale, map_title, bar_title):
     with col1:
         st.subheader(f"District Map of {selected_state.title()}")
         with st.container():
-            st.plotly_chart(map_fig, use_container_height=True, zoom_level=-8)
+            st.plotly_chart(map_fig)
     with col2:
         st.subheader("District Data")
         with st.container(height=400):
-            st.plotly_chart(bar_fig, use_container_width=True, use_container_height=True)
+            st.plotly_chart(bar_fig)
 
 
 

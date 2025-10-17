@@ -1,14 +1,26 @@
 [
     {
-        "id": "f8153953-e905-426b-afed-35cb2328f519",
-        "name": "s1",
+        "id": "ec1525b4-e4ab-4b2c-84bd-581973b5c083",
+        "name": "Sample1",
         "privacy": "Public",
-        "path": "published_dashboards\\f8153953-e905-426b-afed-35cb2328f519"
+        "path": "published_dashboards\\ec1525b4-e4ab-4b2c-84bd-581973b5c083"
     },
     {
-        "id": "96bb2694-dcf4-4788-8013-5e7b30afaa83",
-        "name": "s2",
+        "id": "a68211df-0d27-47ba-8295-910b18be4d10",
+        "name": "Sample2",
         "privacy": "Public",
-        "path": "published_dashboards\\96bb2694-dcf4-4788-8013-5e7b30afaa83"
+        "path": "published_dashboards\\a68211df-0d27-47ba-8295-910b18be4d10"
+    },
+    {
+        "id": "3ad8588c-a899-4a40-b8a9-7c331e8ecc37",
+        "name": "Sample3",
+        "privacy": "Public",
+        "path": "published_dashboards\\3ad8588c-a899-4a40-b8a9-7c331e8ecc37"
+    },
+    {
+        "id": "0db02c0d-b7dd-4a65-b262-9ce964193932",
+        "name": "Sample4",
+        "privacy": "Public",
+        "path": "published_dashboards\\0db02c0d-b7dd-4a65-b262-9ce964193932"
     }
 ]
